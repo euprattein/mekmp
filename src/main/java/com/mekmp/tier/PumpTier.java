@@ -1,6 +1,6 @@
 package com.mekmp.tier;
 
-import com.mekmp.config.MekmpConfig;
+import com.mekmp.config.MekmpServerConfig;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.fml.ModList;
 
@@ -64,12 +64,12 @@ public enum PumpTier {
     public int getDefaultEnergyCapacityFe() { return defaultEnergyCapacityFe; }
     public int getDefaultMaxRange() { return defaultMaxRange; }
 
-    public int getPumpMultiplier() { return MekmpConfig.getPumpMultiplier(this); }
-    public int getTicksPerOperation() { return MekmpConfig.getTicksPerOperation(this); }
-    public int getTankCapacity() { return MekmpConfig.getTankCapacity(this); }
-    public int getEnergyUsageFe() { return MekmpConfig.getEnergyUsageFe(this); }
-    public int getEnergyCapacityFe() { return MekmpConfig.getEnergyCapacityFe(this); }
-    public int getMaxRange() { return MekmpConfig.getMaxRange(this); }
+    public int getPumpMultiplier() { return MekmpServerConfig.getPumpMultiplier(this); }
+    public int getTicksPerOperation() { return MekmpServerConfig.getTicksPerOperation(this); }
+    public int getTankCapacity() { return MekmpServerConfig.getTankCapacity(this); }
+    public int getEnergyUsageFe() { return MekmpServerConfig.getEnergyUsageFe(this); }
+    public int getEnergyCapacityFe() { return MekmpServerConfig.getEnergyCapacityFe(this); }
+    public int getMaxRange() { return MekmpServerConfig.getMaxRange(this); }
 
     @Nullable
     public PumpTier getNextTier() {

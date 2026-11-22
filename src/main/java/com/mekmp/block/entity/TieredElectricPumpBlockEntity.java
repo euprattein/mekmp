@@ -1,6 +1,7 @@
 package com.mekmp.block.entity;
 
 import com.mekmp.block.TieredElectricPumpBlock;
+import com.mekmp.config.MekmpServerConfig;
 import com.mekmp.menu.TieredElectricPumpMenu;
 import com.mekmp.registry.ModBlockEntities;
 import com.mekmp.tier.PumpTier;
@@ -300,7 +301,7 @@ public class TieredElectricPumpBlockEntity extends BlockEntity implements MenuPr
     }
 
     public int getMaxChainBlocksPerOperation() {
-        return 1 << (getTier().ordinal() + 1);
+        return MekmpServerConfig.getMaxChainBlocksPerOperation(getTier());
     }
 
     public RedstoneMode getRedstoneMode() {
@@ -800,7 +801,9 @@ public class TieredElectricPumpBlockEntity extends BlockEntity implements MenuPr
         if (isWater) {
             clearChainState();
             int multiplier = Math.max(1, getTier().getPumpMultiplier());
-            int baseAmount = (outputFluid == heavyWater && !outputFluid.isSame(targetFluid)) ? 10 : 1000;
+            int baseAmount = (outputFluid == heavyWater && !outputFluid.isSame(targetFluid))
+                    ? MekmpServerConfig.getHeavyWaterBaseAmountMb()
+                    : MekmpServerConfig.getWaterBaseAmountMb();
             long scaledAmount = (long) baseAmount * multiplier;
             int amountToAdd = (int) Math.min(scaledAmount, fluidTank.getCapacity());
 

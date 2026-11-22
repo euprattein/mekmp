@@ -1,7 +1,7 @@
 package com.mekmp;
 
 import com.mekmp.client.gui.TieredElectricPumpScreen;
-import com.mekmp.config.MekmpConfig;
+import com.mekmp.config.MekmpServerConfig;
 import com.mekmp.event.TierUpgradeHandler;
 import com.mekmp.registry.*;
 import net.neoforged.api.distmarker.Dist;
@@ -21,7 +21,7 @@ public class MekMorePump {
     public static final String MODID = "mekmp";
 
     public MekMorePump(IEventBus modEventBus, ModContainer modContainer) {
-        modContainer.registerConfig(ModConfig.Type.SERVER, MekmpConfig.SPEC);
+        modContainer.registerConfig(ModConfig.Type.SERVER, MekmpServerConfig.SPEC, "mekmp-server.toml");
 
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
@@ -46,7 +46,7 @@ public class MekMorePump {
         );
     }
 
-    @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @EventBusSubscriber(modid = MODID, value = Dist.CLIENT)
     public static class ClientEvents {
         @SubscribeEvent
         public static void onRegisterScreens(RegisterMenuScreensEvent event) {
