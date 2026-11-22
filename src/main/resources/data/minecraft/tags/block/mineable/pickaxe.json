@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "mekmp:advanced_electric_pump",
+    "mekmp:elite_electric_pump",
+    "mekmp:ultimate_electric_pump",
+    "mekmp:absolute_electric_pump",
+    "mekmp:supreme_electric_pump",
+    "mekmp:cosmic_electric_pump",
+    "mekmp:infinite_electric_pump"
+  ]
+}

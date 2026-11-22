@@ -1,0 +1,1 @@
+{"variants":{"facing=north":{"model":"mekmp:block/20040","y":180},"facing=south":{"model":"mekmp:block/20040"},"facing=east":{"model":"mekmp:block/20040","y":-90},"facing=west":{"model":"mekmp:block/20040","y":90}}}

@@ -1,0 +1,39 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[mods]]
+modId = "mekmp"
+version = "1.0.0"
+displayName = "Mekanism: More Pump"
+description = '''
+Adds tiered Electric Pumps (Advanced through Infinite) for Mekanism and Mekanism Extras.
+'''
+
+[[dependencies.mekmp]]
+    modId = "neoforge"
+    type = "required"
+    versionRange = "[21.1.0,)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.mekmp]]
+    modId = "minecraft"
+    type = "required"
+    versionRange = "[1.21.1,1.22)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.mekmp]]
+    modId = "mekanism"
+    type = "required"
+    versionRange = "[10.7.18,)"
+    ordering = "AFTER"
+    side = "BOTH"
+
+[[dependencies.mekmp]]
+    modId = "mekanism_extras"
+    type = "optional"
+    versionRange = "[0,)"
+    ordering = "AFTER"
+    side = "BOTH"
