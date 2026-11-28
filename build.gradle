@@ -41,8 +41,15 @@ repositories {
         name = "ModMaven"
         url = "https://modmaven.dev/"
     }
+    maven {
+        name = "CurseMaven"
+        url = "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
 }
 
 dependencies {
-    implementation "mekanism:Mekanism:1.21.1-10.7.18.84"
+    implementation "curse.maven:mekanism-268560:5648568"
 }

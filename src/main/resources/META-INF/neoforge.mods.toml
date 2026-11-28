@@ -27,7 +27,7 @@ Adds tiered Electric Pumps (Advanced through Infinite) for Mekanism and Mekanism
 [[dependencies.mekmp]]
     modId = "mekanism"
     type = "required"
-    versionRange = "[10.7.18,)"
+    versionRange = "[10.7.0,)"
     ordering = "AFTER"
     side = "BOTH"
 
